@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     php5-curl \
     php5-mcrypt 
 
+RUN sudo php5enmod mcrypt
+
 RUN git clone https://github.com/aajanki/yle-dl.git && \
     cd yle-dl && \
     make install
